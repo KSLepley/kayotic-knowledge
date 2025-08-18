@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { GraduationCap, Calculator, Flask, Book, Globe, Languages, Lightbulb, Users, Calendar, Video, UserGraduate, Mail, Phone, Clock, CheckCircle } from "lucide-react"
+import { GraduationCap, Calculator, Beaker, Book, Globe, Languages, Lightbulb, Users, Calendar, Video, GraduationCap as UserGraduate, Mail, Phone, Clock, CheckCircle } from "lucide-react"
 
 export default function Home() {
   return (
@@ -93,7 +92,7 @@ export default function Home() {
             <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <CardHeader className="text-center">
                 <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-green-200 transition-colors">
-                  <Flask className="w-8 h-8 text-green-600" />
+                  <Beaker className="w-8 h-8 text-green-600" />
                 </div>
                 <CardTitle>Science</CardTitle>
               </CardHeader>
