@@ -300,7 +300,7 @@ export default function Home() {
                 <p className="text-gray-600 mb-6">
                   Face-to-face sessions for hands-on learning and immediate feedback.
                 </p>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/inperson', '_blank')}>
+                <Button className="w-full bg-purple-600 hover:bg-purple-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/consultation-clone', '_blank')}>
                   Schedule In-Person
                 </Button>
               </CardContent>
