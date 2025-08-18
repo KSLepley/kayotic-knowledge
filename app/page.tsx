@@ -1,12 +1,56 @@
+'use client'
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { GraduationCap, Calculator, Beaker, Book, Globe, Languages, Lightbulb, Users, Calendar, Video, GraduationCap as UserGraduate, Mail, Phone, Clock, CheckCircle } from "lucide-react"
 
-// Main page component for Kayotic Tutoring website
 export default function Home() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    subject: '',
+    message: ''
+  })
+  
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<{success: boolean, message: string} | null>(null)
+
+  const handleContactSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitStatus({ success: true, message: result.message })
+        setFormData({ name: '', email: '', phone: '', service: '', subject: '', message: '' })
+      } else {
+        setSubmitStatus({ success: false, message: result.error || 'Something went wrong. Please try again.' })
+      }
+    } catch (error) {
+      setSubmitStatus({ success: false, message: 'Network error. Please try again.' })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Navigation */}
@@ -22,6 +66,7 @@ export default function Home() {
                 <a href="#home" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
                 <a href="#services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
                 <a href="#about" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                <a href="#pricing" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
                 <a href="#schedule" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Schedule</a>
                 <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
               </div>
@@ -43,11 +88,11 @@ export default function Home() {
                 Personalized learning plans, flexible scheduling, and proven results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-lg px-8 py-6">
-                  Schedule a Session
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-lg px-8 py-6" onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}>
+                  View Pricing
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-6">
-                  Learn More
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-6" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                  Our Services
                 </Button>
               </div>
             </div>
@@ -221,7 +266,9 @@ export default function Home() {
                 <p className="text-gray-600 mb-6">
                   15-minute session to discuss your needs and create a personalized learning plan.
                 </p>
-                <Button className="w-full bg-green-600 hover:bg-green-700">Book Consultation</Button>
+                <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/consultation', '_blank')}>
+                  Book Free Consultation
+                </Button>
               </CardContent>
             </Card>
 
@@ -236,7 +283,9 @@ export default function Home() {
                 <p className="text-gray-600 mb-6">
                   Online sessions from anywhere. Interactive whiteboard and screen sharing available.
                 </p>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">Schedule Virtual</Button>
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/virtual', '_blank')}>
+                  Schedule Virtual Session
+                </Button>
               </CardContent>
             </Card>
 
@@ -251,9 +300,162 @@ export default function Home() {
                 <p className="text-gray-600 mb-6">
                   Face-to-face sessions for hands-on learning and immediate feedback.
                 </p>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700">Schedule In-Person</Button>
+                <Button className="w-full bg-purple-600 hover:bg-purple-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/inperson', '_blank')}>
+                  Schedule In-Person
+                </Button>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Pricing & Packages</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transparent, competitive pricing for quality tutoring services. Choose the package that fits your needs.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Single Session Package */}
+            <Card className="relative hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardHeader className="text-center">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+                </div>
+                <CardTitle className="text-2xl text-blue-600">Single Session</CardTitle>
+                <div className="text-4xl font-bold text-gray-900">$45</div>
+                <div className="text-gray-600">per hour</div>
+              </CardHeader>
+              <CardContent className="text-center">
+                <ul className="space-y-3 mb-8 text-left">
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>1-hour tutoring session</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Any subject</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Virtual or in-person</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Flexible scheduling</span>
+                  </li>
+                </ul>
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/single', '_blank')}>
+                  Book Single Session
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Package Deal */}
+            <Card className="relative hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-orange-500">
+              <CardHeader className="text-center">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Best Value</span>
+                </div>
+                <CardTitle className="text-2xl text-orange-600">5-Session Package</CardTitle>
+                <div className="text-4xl font-bold text-gray-900">$200</div>
+                <div className="text-gray-600">$40 per hour (save $25!)</div>
+              </CardHeader>
+              <CardContent className="text-center">
+                <ul className="space-y-3 mb-8 text-left">
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>5 one-hour sessions</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Any subject or mix</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Progress tracking</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Valid for 3 months</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Priority scheduling</span>
+                  </li>
+                </ul>
+                <Button className="w-full bg-orange-500 hover:bg-orange-600" onClick={() => window.open('https://calendly.com/kayoticknowledge/package', '_blank')}>
+                  Get Package Deal
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Monthly Plan */}
+            <Card className="relative hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl text-purple-600">Monthly Plan</CardTitle>
+                <div className="text-4xl font-bold text-gray-900">$150</div>
+                <div className="text-gray-600">per month</div>
+              </CardHeader>
+              <CardContent className="text-center">
+                <ul className="space-y-3 mb-8 text-left">
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>4 one-hour sessions</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Consistent weekly support</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Long-term progress</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Monthly assessment</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Parent progress reports</span>
+                  </li>
+                </ul>
+                <Button className="w-full bg-purple-600 hover:bg-purple-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/monthly', '_blank')}>
+                  Start Monthly Plan
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Additional Services */}
+          <div className="mt-16 text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Additional Services</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="text-3xl font-bold text-blue-600 mb-2">$25</div>
+                <div className="text-gray-700 font-semibold">Test Prep</div>
+                <div className="text-sm text-gray-600">SAT, ACT, AP exams</div>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="text-3xl font-bold text-green-600 mb-2">$30</div>
+                <div className="text-gray-700 font-semibold">Essay Review</div>
+                <div className="text-sm text-gray-600">College applications</div>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="text-3xl font-bold text-purple-600 mb-2">$35</div>
+                <div className="text-gray-700 font-semibold">Study Skills</div>
+                <div className="text-sm text-gray-600">Organization & time management</div>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="text-3xl font-bold text-orange-600 mb-2">$40</div>
+                <div className="text-gray-700 font-semibold">Group Sessions</div>
+                <div className="text-sm text-gray-600">2-3 students, per person</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -302,26 +504,42 @@ export default function Home() {
             </div>
             
             <Card className="p-8">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleContactSubmit}>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                    <Input placeholder="Your Name" required />
+                    <Input 
+                      placeholder="Your Name" 
+                      required 
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <Input type="email" placeholder="Your Email" required />
+                    <Input 
+                      type="email" 
+                      placeholder="Your Email" 
+                      required 
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    />
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                    <Input type="tel" placeholder="Your Phone" />
+                    <Input 
+                      type="tel" 
+                      placeholder="Your Phone" 
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Service</label>
-                    <Select>
+                    <Select onValueChange={(value) => setFormData({...formData, service: value})}>
                       <SelectTrigger>
                         <SelectValue placeholder="Select Service" />
                       </SelectTrigger>
@@ -337,7 +555,7 @@ export default function Home() {
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                  <Select>
+                  <Select onValueChange={(value) => setFormData({...formData, subject: value})}>
                     <SelectTrigger>
                       <SelectValue placeholder="Select Subject (Optional)" />
                     </SelectTrigger>
@@ -355,12 +573,31 @@ export default function Home() {
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <Textarea placeholder="Tell us about your needs..." rows={4} />
+                  <Textarea 
+                    placeholder="Tell us about your needs..." 
+                    rows={4}
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  />
                 </div>
                 
-                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
-                  Send Message
+                <Button 
+                  type="submit" 
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
+                
+                {submitStatus && (
+                  <div className={`p-4 rounded-lg ${
+                    submitStatus.success 
+                      ? 'bg-green-100 text-green-700 border border-green-200' 
+                      : 'bg-red-100 text-red-700 border border-red-200'
+                  }`}>
+                    {submitStatus.message}
+                  </div>
+                )}
               </form>
             </Card>
           </div>
@@ -387,6 +624,7 @@ export default function Home() {
                 <li><a href="#home" className="text-gray-300 hover:text-white transition-colors">Home</a></li>
                 <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a></li>
                 <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">About</a></li>
+                <li><a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a></li>
                 <li><a href="#schedule" className="text-gray-300 hover:text-white transition-colors">Schedule</a></li>
               </ul>
             </div>
