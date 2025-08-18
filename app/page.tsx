@@ -110,6 +110,94 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Me Section */}
+      <section id="about" className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Your Tutor</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              The story behind the success - from student athlete to academic mentor
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <h3 className="text-3xl font-bold text-gray-900">Hi, I'm Kaylie! 👋</h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  I'm not just another tutor - I'm a <span className="font-semibold text-blue-600">UC Santa Cruz graduate</span> with a 
+                  <span className="font-semibold text-purple-600"> Bachelor's in Computer Science</span> and a 
+                  <span className="font-semibold text-green-600">3.7 GPA</span> that proves I know how to balance academics with life!
+                </p>
+                
+                <div className="grid grid-cols-2 gap-4 pt-4">
+                  <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <div className="text-2xl font-bold text-blue-600">3.7</div>
+                    <div className="text-sm text-gray-600">College GPA</div>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-green-500">
+                    <div className="text-2xl font-bold text-green-600">4.4</div>
+                    <div className="text-sm text-gray-600">High School GPA</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="text-xl font-semibold text-gray-900">🏀 Student Athlete Life</h4>
+                <p className="text-gray-700">
+                  I played <span className="font-semibold text-orange-600">women's basketball</span> at UCSC while maintaining my grades. 
+                  Talk about time management skills! I know what it's like to juggle sports, academics, and social life.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="text-xl font-semibold text-gray-900">💻 From Student to Teacher</h4>
+                <p className="text-gray-700">
+                  I've been in your shoes! I was a <span className="font-semibold text-indigo-600">CS tutor for college courses</span>, 
+                  helping fellow students understand complex programming concepts. Now I'm bringing that same energy to middle and high school students.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="text-xl font-semibold text-gray-900">🎯 Why I'm Different</h4>
+                <p className="text-gray-700">
+                  I combine <span className="font-semibold text-purple-600">academic excellence</span> with 
+                  <span className="font-semibold text-orange-600"> real-world experience</span>. I've walked the path from private school 
+                  to college athlete to professional tutor. I get the challenges students face because I've lived them!
+                </p>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-8 rounded-2xl text-white text-center">
+                <div className="space-y-4">
+                  <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <GraduationCap className="w-12 h-12 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold">UC Santa Cruz Graduate</h4>
+                  <p className="text-blue-100">Bachelor of Science in Computer Science</p>
+                  <div className="flex justify-center space-x-4 pt-4">
+                    <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                      CS Major
+                    </Badge>
+                    <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                      Basketball
+                    </Badge>
+                    <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                      Tutor
+                    </Badge>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="absolute -bottom-4 -right-4 bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                Available Now!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
