@@ -283,7 +283,7 @@ export default function Home() {
                 <p className="text-gray-600 mb-6">
                   Online sessions from anywhere. Interactive whiteboard and screen sharing available.
                 </p>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/virtual', '_blank')}>
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/virtual-session-clone', '_blank')}>
                   Schedule Virtual Session
                 </Button>
               </CardContent>
@@ -349,7 +349,7 @@ export default function Home() {
                     <span>Flexible scheduling</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/single', '_blank')}>
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/virtual-session-clone', '_blank')}>
                   Book Single Session
                 </Button>
               </CardContent>
@@ -388,7 +388,7 @@ export default function Home() {
                     <span>Priority scheduling</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600" onClick={() => window.open('https://calendly.com/kayoticknowledge/package', '_blank')}>
+                <Button className="w-full bg-orange-500 hover:bg-orange-600" onClick={() => window.open('https://calendly.com/kayoticknowledge/virtual-session-clone', '_blank')}>
                   Get Package Deal
                 </Button>
               </CardContent>
@@ -424,7 +424,7 @@ export default function Home() {
                     <span>Parent progress reports</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/monthly', '_blank')}>
+                <Button className="w-full bg-purple-600 hover:bg-purple-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/virtual-session-clone', '_blank')}>
                   Start Monthly Plan
                 </Button>
               </CardContent>
