@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayotic Tutoring - Business Card</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        
+        .business-card {
+            width: 3.5in;
+            height: 2in;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .company-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #f59e0b;
+        }
+        
+        .tagline {
+            font-size: 12px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .contact-info div {
+            margin-bottom: 8px;
+        }
+        
+        .website {
+            font-size: 16px;
+            font-weight: bold;
+            color: #f59e0b;
+            margin-top: 15px;
+        }
+        
+        .subjects {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 10px;
+            text-align: right;
+            opacity: 0.8;
+        }
+        
+        .background-pattern {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 80px;
+            opacity: 0.1;
+            color: white;
+        }
+        
+        .print-instructions {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .print-instructions h3 {
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+        
+        .print-instructions ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .print-instructions li {
+            margin-bottom: 8px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .print-instructions { display: none; }
+            .business-card { 
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Business Card Front -->
+    <div class="business-card">
+        <div class="background-pattern">🎓</div>
+        <div class="card-content">
+            <div class="company-name">Kayotic Tutoring</div>
+            <div class="tagline">Expert Middle & High School Tutoring</div>
+            
+            <div class="contact-info">
+                <div><strong>📧</strong> kayoticknowledge@gmail.com</div>
+                <div><strong>📱</strong> (555) 123-4567</div>
+                <div><strong>⏰</strong> Mon-Fri: 9AM-8PM</div>
+            </div>
+            
+            <div class="website">kayoticknowledge.com</div>
+            
+            <div class="subjects">
+                Math • Science • English<br>
+                History • Languages • Study Skills
+            </div>
+        </div>
+    </div>
+    
+    <!-- Business Card Back (Optional) -->
+    <div class="business-card" style="margin-top: 20px; background: white; color: #333;">
+        <div class="card-content">
+            <div style="color: #2563eb; font-size: 20px; font-weight: bold; margin-bottom: 15px;">
+                Why Choose Kayotic Tutoring?
+            </div>
+            
+            <div style="font-size: 12px; line-height: 1.4;">
+                ✓ Personalized Learning Plans<br>
+                ✓ Expert Tutors<br>
+                ✓ Virtual & In-Person Sessions<br>
+                ✓ All Subjects Covered<br>
+                ✓ Flexible Scheduling<br>
+                ✓ Progress Tracking
+            </div>
+            
+            <div style="margin-top: 15px; font-size: 14px; color: #2563eb;">
+                <strong>Book Your Free Consultation Today!</strong>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Print Instructions -->
+    <div class="print-instructions">
+        <h3>How to Print Your Business Cards</h3>
+        <ul>
+            <li><strong>Option 1 - Print at home:</strong> Use cardstock paper (90-110 lb) and print on both sides</li>
+            <li><strong>Option 2 - Professional printing:</strong> Save as PDF and send to a print shop</li>
+            <li><strong>Option 3 - Online printing:</strong> Use services like Vistaprint, Moo, or GotPrint</li>
+            <li><strong>Digital sharing:</strong> Screenshot and share via email, text, or social media</li>
+        </ul>
+        
+        <p><strong>Tip:</strong> For best results, print on glossy or matte cardstock. Standard business card size is 3.5" x 2".</p>
+    </div>
+    
+    <script>
+        // Add click-to-copy functionality for the website URL
+        document.querySelector('.website').addEventListener('click', function() {
+            const url = this.textContent;
+            navigator.clipboard.writeText(url).then(() => {
+                this.style.color = '#10b981';
+                this.textContent = 'Copied!';
+                setTimeout(() => {
+                    this.style.color = '#f59e0b';
+                    this.textContent = url;
+                }, 2000);
+            });
+        });
+        
+        // Add click-to-copy for email
+        document.querySelector('.contact-info div:first-child').addEventListener('click', function() {
+            const email = this.textContent.replace('📧 ', '');
+            navigator.clipboard.writeText(email).then(() => {
+                this.style.color = '#10b981';
+                const originalText = this.innerHTML;
+                this.innerHTML = '<strong>📧</strong> Copied!';
+                setTimeout(() => {
+                    this.style.color = 'white';
+                    this.innerHTML = originalText;
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html> 
