@@ -171,8 +171,12 @@ export default function Home() {
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-8 rounded-2xl text-white text-center">
                 <div className="space-y-4">
-                  <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <GraduationCap className="w-12 h-12 text-white" />
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                    <img 
+                      src="/images/profilepic.png" 
+                      alt="Kaylie - UCSC CS Graduate and Tutor" 
+                      className="w-full h-full object-cover rounded-full"
+                    />
                   </div>
                   <h4 className="text-xl font-bold">UC Santa Cruz Graduate</h4>
                   <p className="text-blue-100">Bachelor of Science in Computer Science</p>
@@ -186,7 +190,7 @@ export default function Home() {
                     <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                       Tutor
                     </Badge>
-                  </div>
+                    </div>
                 </div>
               </div>
               
