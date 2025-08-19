@@ -324,8 +324,12 @@ export default function Home() {
             </div>
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-80 h-80 bg-blue-100 rounded-full flex items-center justify-center">
-                  <Users className="w-40 h-40 text-blue-600 opacity-30" />
+                <div className="w-80 h-80 bg-blue-100 rounded-full flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/images/profilepic.png" 
+                    alt="Kaylie - Your Personal Tutor" 
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
                 <div className="absolute -bottom-4 -left-4 bg-orange-500 text-white px-6 py-3 rounded-full">
                   <span className="font-semibold">500+ Students Helped</span>
