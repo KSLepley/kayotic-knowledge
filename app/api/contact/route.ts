@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -28,13 +26,23 @@ export async function POST(request: NextRequest) {
     })
 
     // Check if API key is available
-    if (!process.env.RESEND_API_KEY) {
+    const apiKey = process.env.RESEND_API_KEY
+    console.log('API Key check:', {
+      hasApiKey: !!apiKey,
+      apiKeyLength: apiKey ? apiKey.length : 0,
+      apiKeyStart: apiKey ? apiKey.substring(0, 10) + '...' : 'None'
+    })
+    
+    if (!apiKey) {
       console.error('RESEND_API_KEY is not set')
       return NextResponse.json(
         { error: 'Email service not configured. Please try again later.' },
         { status: 500 }
       )
     }
+
+    // Initialize Resend with the API key
+    const resend = new Resend(apiKey)
 
     // Send email to your Gmail address
     const { data, error } = await resend.emails.send({
