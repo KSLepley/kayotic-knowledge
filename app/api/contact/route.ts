@@ -27,9 +27,18 @@ export async function POST(request: NextRequest) {
       timestamp: new Date().toISOString()
     })
 
+    // Check if API key is available
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not set')
+      return NextResponse.json(
+        { error: 'Email service not configured. Please try again later.' },
+        { status: 500 }
+      )
+    }
+
     // Send email to your Gmail address
     const { data, error } = await resend.emails.send({
-      from: 'Kayotic Tutoring <noreply@kayoticknowledge.com>',
+      from: 'onboarding@resend.dev', // Use Resend's default verified domain
       to: ['kayoticknowledge@gmail.com'],
       subject: `New Tutoring Inquiry: ${service} - ${name}`,
       html: `
@@ -110,6 +119,11 @@ This inquiry was submitted through your Kayotic Tutoring website contact form.
 
   } catch (error) {
     console.error('Contact form error:', error)
+    console.error('Error details:', {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : undefined,
+      apiKey: process.env.RESEND_API_KEY ? 'Present' : 'Missing'
+    })
     return NextResponse.json(
       { error: 'Something went wrong. Please try again.' },
       { status: 500 }
