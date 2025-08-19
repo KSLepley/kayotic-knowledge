@@ -98,8 +98,12 @@ export default function Home() {
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-64 h-64 bg-white/10 rounded-full flex items-center justify-center">
-                  <GraduationCap className="w-32 h-32 text-white/30" />
+                <div className="w-64 h-64 bg-white/10 rounded-full flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/images/profilepic.png" 
+                    alt="Kaylie - Professional Tutor" 
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-2xl">A+</span>
@@ -409,6 +413,15 @@ export default function Home() {
       <section id="pricing" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/images/profilepic.png" 
+                  alt="Kaylie - Your Tutor" 
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+            </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Pricing & Packages</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transparent, competitive pricing for quality tutoring services. Choose the package that fits your needs.
@@ -560,6 +573,15 @@ export default function Home() {
       <section id="contact" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/images/profilepic.png" 
+                  alt="Kaylie - Ready to Help" 
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+            </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Ready to start your academic journey? Contact us today!
