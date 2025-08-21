@@ -27,22 +27,34 @@ export default function Home() {
     setIsSubmitting(true)
     setSubmitStatus(null)
 
+    // Simple Formspree submission - no API keys needed!
+    const formspreeUrl = 'https://formspree.io/f/xayzqkzg'
+    
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(formspreeUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          subject: formData.subject,
+          message: formData.message,
+          _replyto: formData.email, // This ensures replies go to the person who submitted
+        }),
       })
 
-      const result = await response.json()
-
-      if (result.success) {
-        setSubmitStatus({ success: true, message: result.message })
+      if (response.ok) {
+        setSubmitStatus({ 
+          success: true, 
+          message: 'Thank you! Your message has been sent to Kaylie. She\'ll get back to you within 24 hours.' 
+        })
         setFormData({ name: '', email: '', phone: '', service: '', subject: '', message: '' })
       } else {
-        setSubmitStatus({ success: false, message: result.error || 'Something went wrong. Please try again.' })
+        setSubmitStatus({ success: false, message: 'Something went wrong. Please try again.' })
       }
     } catch (error) {
       setSubmitStatus({ success: false, message: 'Network error. Please try again.' })
