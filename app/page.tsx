@@ -28,7 +28,7 @@ export default function Home() {
     setSubmitStatus(null)
 
     // Simple Formspree submission - no API keys needed!
-    const formspreeUrl = 'https://formspree.io/f/xayzqkzg'
+    const formspreeUrl = 'https://formspree.io/f/xnnzkyjn'
     
     try {
       const response = await fetch(formspreeUrl, {
