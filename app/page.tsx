@@ -79,6 +79,7 @@ export default function Home() {
                 <a href="#services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
                 <a href="#about" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
                 <a href="#pricing" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
+                <a href="#payment" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Payment</a>
                 <a href="#schedule" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Schedule</a>
                 <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
               </div>
@@ -559,6 +560,103 @@ export default function Home() {
                 <div className="text-3xl font-bold text-orange-600 mb-2">$40</div>
                 <div className="text-gray-700 font-semibold">Group Sessions</div>
                 <div className="text-sm text-gray-600">2-3 students, per person</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Payment Section */}
+      <section id="payment" className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                <CheckCircle className="w-10 h-10 text-green-600" />
+              </div>
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Easy Payment Options</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Quick and secure payment methods. Payment is due before or at the start of each session.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Zelle Payment */}
+            <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-blue-500">
+              <CardHeader>
+                <div className="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                  <div className="text-2xl font-bold text-blue-600">Z</div>
+                </div>
+                <CardTitle className="text-blue-600">Zelle</CardTitle>
+                <CardDescription>Fast & Free Bank Transfers</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <p className="text-sm text-gray-600 mb-2">Send to:</p>
+                    <p className="font-mono text-lg font-bold text-blue-600">kayoticknowledge@gmail.com</p>
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    <p>• No fees</p>
+                    <p>• Instant transfer</p>
+                    <p>• Use your bank app</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Venmo Payment */}
+            <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-green-500">
+              <CardHeader>
+                <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                  <div className="text-2xl font-bold text-green-600">V</div>
+                </div>
+                <CardTitle className="text-green-600">Venmo</CardTitle>
+                <CardDescription>Social & Convenient</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <p className="text-sm text-gray-600 mb-2">Send to:</p>
+                    <p className="font-mono text-lg font-bold text-green-600">@kayoticknowledge</p>
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    <p>• No fees</p>
+                    <p>• Instant transfer</p>
+                    <p>• Use Venmo app</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Payment Instructions */}
+          <div className="mt-12 text-center">
+            <div className="bg-gray-50 p-8 rounded-2xl max-w-3xl mx-auto">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Payment Instructions</h3>
+              <div className="grid md:grid-cols-3 gap-6 text-left">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-blue-600 font-bold text-xl">1</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Book Session</h4>
+                  <p className="text-sm text-gray-600">Schedule your tutoring session through Calendly</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-green-600 font-bold text-xl">2</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Send Payment</h4>
+                  <p className="text-sm text-gray-600">Pay via Zelle or Venmo before your session</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-purple-600 font-bold text-xl">3</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Start Learning</h4>
+                  <p className="text-sm text-gray-600">Begin your tutoring session with confidence</p>
+                </div>
               </div>
             </div>
           </div>
