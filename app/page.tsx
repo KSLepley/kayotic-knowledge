@@ -110,12 +110,8 @@ export default function Home() {
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-64 h-64 bg-white/10 rounded-full flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/images/profilepic.png" 
-                    alt="Kaylie - Professional Tutor" 
-                    className="w-full h-full object-cover rounded-full"
-                  />
+                <div className="w-64 h-64 bg-white/10 rounded-full flex items-center justify-center">
+                  <GraduationCap className="w-32 h-32 text-white/80" />
                 </div>
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-2xl">A+</span>
@@ -187,12 +183,8 @@ export default function Home() {
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-8 rounded-2xl text-white text-center">
                 <div className="space-y-4">
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
-                    <img 
-                      src="/images/profilepic.png" 
-                      alt="Kaylie - UCSC CS Graduate and Tutor" 
-                      className="w-full h-full object-cover rounded-full"
-                    />
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <GraduationCap className="w-10 h-10 text-white" />
                   </div>
                   <h4 className="text-xl font-bold">UC Santa Cruz Graduate</h4>
                   <p className="text-blue-100">Bachelor of Science in Computer Science</p>
@@ -340,12 +332,8 @@ export default function Home() {
             </div>
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-80 h-80 bg-blue-100 rounded-full flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/images/profilepic.png" 
-                    alt="Kaylie - Your Personal Tutor" 
-                    className="w-full h-full object-cover rounded-full"
-                  />
+                <div className="w-80 h-80 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Users className="w-40 h-40 text-blue-600" />
                 </div>
                 <div className="absolute -bottom-4 -left-4 bg-orange-500 text-white px-6 py-3 rounded-full">
                   <span className="font-semibold">500+ Students Helped</span>
@@ -426,12 +414,8 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center overflow-hidden">
-                <img 
-                  src="/images/profilepic.png" 
-                  alt="Kaylie - Your Tutor" 
-                  className="w-full h-full object-cover rounded-full"
-                />
+              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+                <GraduationCap className="w-10 h-10 text-blue-600" />
               </div>
             </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Pricing & Packages</h2>
@@ -586,12 +570,8 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center overflow-hidden">
-                <img 
-                  src="/images/profilepic.png" 
-                  alt="Kaylie - Ready to Help" 
-                  className="w-full h-full object-cover rounded-full"
-                />
+              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+                <Mail className="w-10 h-10 text-blue-600" />
               </div>
             </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
