@@ -384,8 +384,8 @@ export default function Home() {
                 <p className="text-gray-600 mb-6">
                   Online sessions from anywhere. Interactive whiteboard and screen sharing available.
                 </p>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/virtual-session-clone', '_blank')}>
-                  Schedule Virtual Session
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                  Book Here!
                 </Button>
               </CardContent>
             </Card>
@@ -401,7 +401,7 @@ export default function Home() {
                 <p className="text-gray-600 mb-6">
                   Face-to-face sessions for hands-on learning and immediate feedback.
                 </p>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/consultation-clone', '_blank')}>
+                <Button className="w-full bg-purple-600 hover:bg-purple-700" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                   Schedule In-Person
                 </Button>
               </CardContent>
@@ -455,8 +455,8 @@ export default function Home() {
                     <span>Flexible scheduling</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/virtual-session-clone', '_blank')}>
-                  Book Single Session
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                  Book Here!
                 </Button>
               </CardContent>
             </Card>
@@ -494,8 +494,8 @@ export default function Home() {
                     <span>Priority scheduling</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600" onClick={() => window.open('https://calendly.com/kayoticknowledge/virtual-session-clone', '_blank')}>
-                  Get Package Deal
+                <Button className="w-full bg-orange-500 hover:bg-orange-600" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                  Book Here!
                 </Button>
               </CardContent>
             </Card>
@@ -530,8 +530,8 @@ export default function Home() {
                     <span>Parent progress reports</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700" onClick={() => window.open('https://calendly.com/kayoticknowledge/virtual-session-clone', '_blank')}>
-                  Start Monthly Plan
+                <Button className="w-full bg-purple-600 hover:bg-purple-700" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                  Book Here!
                 </Button>
               </CardContent>
             </Card>
@@ -721,9 +721,9 @@ export default function Home() {
                 <Mail className="w-10 h-10 text-blue-600" />
               </div>
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Book Your Session</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to start your academic journey? Contact us today!
+              Ready to start your academic journey? Send us an inquiry and we'll get back to you within 24 hours to schedule your session!
             </p>
           </div>
           
@@ -761,6 +761,16 @@ export default function Home() {
             </div>
             
             <Card className="p-8">
+              <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <h4 className="font-semibold text-blue-900 mb-2">How Our Booking Process Works:</h4>
+                <ol className="text-sm text-blue-800 space-y-1">
+                  <li>1. Send us your inquiry below</li>
+                  <li>2. We'll reply within 24 hours with available times</li>
+                  <li>3. You'll receive a Calendly link to choose your preferred time</li>
+                  <li>4. Complete payment via Zelle or PayPal</li>
+                  <li>5. Start your learning journey!</li>
+                </ol>
+              </div>
               <form className="space-y-6" onSubmit={handleContactSubmit}>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
@@ -843,7 +853,7 @@ export default function Home() {
                   className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? 'Sending...' : 'Send Booking Inquiry'}
                 </Button>
                 
                 {submitStatus && (
