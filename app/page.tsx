@@ -98,6 +98,7 @@ export default function Home() {
           📚 Book Now!
         </Button>
       </div>
+      {/* Force Vercel deployment with latest Book Now buttons */}
 
       {/* Hero Section */}
       <section id="home" className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 text-white py-20 lg:py-32">
