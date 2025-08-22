@@ -16,7 +16,8 @@ export default function Home() {
     phone: '',
     service: '',
     subject: '',
-    message: ''
+    message: '',
+    package: 'undecided' // Added package preference
   })
   
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -43,6 +44,7 @@ export default function Home() {
           service: formData.service,
           subject: formData.subject,
           message: formData.message,
+          package: formData.package, // Added package to form data
           _replyto: formData.email, // This ensures replies go to the person who submitted
         }),
       })
@@ -52,7 +54,7 @@ export default function Home() {
           success: true, 
           message: 'Thank you! Your message has been sent to Kaylie. She\'ll get back to you within 24 hours.' 
         })
-        setFormData({ name: '', email: '', phone: '', service: '', subject: '', message: '' })
+        setFormData({ name: '', email: '', phone: '', service: '', subject: '', message: '', package: 'undecided' })
       } else {
         setSubmitStatus({ success: false, message: 'Something went wrong. Please try again.' })
       }
@@ -776,7 +778,7 @@ export default function Home() {
               <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
                 <h4 className="font-semibold text-blue-900 mb-2">How Our Booking Process Works:</h4>
                 <ol className="text-sm text-blue-800 space-y-1">
-                  <li>1. Send us your inquiry below</li>
+                  <li>1. Send us your inquiry below (we'll see your service & package preference)</li>
                   <li>2. We'll reply within 24 hours with available times</li>
                   <li>3. You'll receive a Calendly link to choose your preferred time</li>
                   <li>4. Complete payment via Zelle or PayPal</li>
@@ -827,6 +829,20 @@ export default function Home() {
                         <SelectItem value="virtual">Virtual Tutoring</SelectItem>
                         <SelectItem value="in-person">In-Person Tutoring</SelectItem>
                         <SelectItem value="other">Other Inquiry</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Package Preference</label>
+                    <Select onValueChange={(value) => setFormData({...formData, package: value})}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select Package (Optional)" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="single">Single Session ($45/hour)</SelectItem>
+                        <SelectItem value="package">5-Session Package ($200)</SelectItem>
+                        <SelectItem value="monthly">Monthly Plan ($150/month)</SelectItem>
+                        <SelectItem value="undecided">Not Sure Yet</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
