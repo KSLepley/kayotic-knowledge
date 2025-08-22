@@ -575,87 +575,136 @@ export default function Home() {
                 <CheckCircle className="w-10 h-10 text-green-600" />
               </div>
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Easy Payment Options</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Payment & Booking Policy</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Quick and secure payment methods. Payment is due before or at the start of each session.
+              Simple, secure payment options with clear policies to ensure smooth scheduling for everyone.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Zelle Payment */}
-            <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-blue-500">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                  <div className="text-2xl font-bold text-blue-600">Z</div>
-                </div>
-                <CardTitle className="text-blue-600">Zelle</CardTitle>
-                <CardDescription>Fast & Free Bank Transfers</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <p className="text-sm text-gray-600 mb-2">Send to:</p>
-                    <p className="font-mono text-lg font-bold text-blue-600">kayoticknowledge@gmail.com</p>
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Payment Methods */}
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Accepted Payment Methods</h3>
+              
+              {/* Zelle */}
+              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold text-xl">Z</span>
                   </div>
-                  <div className="text-sm text-gray-600">
-                    <p>• No fees</p>
-                    <p>• Instant transfer</p>
-                    <p>• Use your bank app</p>
+                  <div>
+                    <h4 className="text-lg font-semibold text-blue-900">Zelle</h4>
+                    <p className="text-blue-700 text-sm">Fast & Free Bank Transfers</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+                <div className="bg-white p-4 rounded-lg border border-blue-200">
+                  <p className="text-sm text-gray-600 mb-2">Send payment to:</p>
+                  <p className="font-mono text-lg font-bold text-blue-600">kayoticknowledge@gmail.com</p>
+                </div>
+                <div className="mt-3 text-sm text-blue-700">
+                  <p>✓ No fees • Instant transfer • Use your bank app</p>
+                </div>
+              </div>
 
-            {/* Venmo Payment */}
-            <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-green-500">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                  <div className="text-2xl font-bold text-green-600">V</div>
-                </div>
-                <CardTitle className="text-green-600">Venmo</CardTitle>
-                <CardDescription>Social & Convenient</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <p className="text-sm text-gray-600 mb-2">Send to:</p>
-                    <p className="font-mono text-lg font-bold text-green-600">@kayoticknowledge</p>
+              {/* PayPal */}
+              <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-xl border border-yellow-200">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold text-xl">P</span>
                   </div>
-                  <div className="text-sm text-gray-600">
-                    <p>• No fees</p>
-                    <p>• Instant transfer</p>
-                    <p>• Use Venmo app</p>
+                  <div>
+                    <h4 className="text-lg font-semibold text-yellow-900">PayPal</h4>
+                    <p className="text-yellow-700 text-sm">Secure & Widely Accepted</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+                <div className="bg-white p-4 rounded-lg border border-yellow-200">
+                  <p className="text-sm text-gray-600 mb-2">Send payment to:</p>
+                  <p className="font-mono text-lg font-bold text-yellow-600">kayoticknowledge@gmail.com</p>
+                </div>
+                <div className="mt-3 text-sm text-yellow-700">
+                  <p>✓ Secure • Instant • Use PayPal app or website</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Payment Policy */}
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Important Payment Policy</h3>
+              
+              {/* 12-Hour Window */}
+              <div className="bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mr-4">
+                    <Clock className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-orange-900">12-Hour Payment Window</h4>
+                    <p className="text-orange-700 text-sm">Secure your booking quickly</p>
+                  </div>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-orange-200">
+                  <p className="text-sm text-gray-600 mb-2">After booking your session:</p>
+                  <p className="font-semibold text-orange-700">You have 12 hours to complete payment</p>
+                  <p className="text-xs text-orange-600 mt-2">Sessions without payment within 12 hours will be automatically cancelled</p>
+                </div>
+              </div>
+
+              {/* Cancellation Policy */}
+              <div className="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-xl border border-red-200">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-4">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-red-900">Cancellation Policy</h4>
+                    <p className="text-red-700 text-sm">Fair policies for everyone</p>
+                  </div>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-red-200">
+                  <ul className="text-sm text-gray-700 space-y-2">
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                      <span><strong>No payment within 12 hours:</strong> Session cancelled</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                      <span><strong>24+ hours notice:</strong> Full refund or reschedule</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                      <span><strong>Less than 24 hours:</strong> 50% refund or reschedule</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Payment Instructions */}
-          <div className="mt-12 text-center">
-            <div className="bg-gray-50 p-8 rounded-2xl max-w-3xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Payment Instructions</h3>
-              <div className="grid md:grid-cols-3 gap-6 text-left">
+          {/* How It Works */}
+          <div className="mt-16">
+            <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-2xl border border-purple-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">How It Works</h3>
+              <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-blue-600 font-bold text-xl">1</span>
+                  <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-2xl">1</span>
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Book Session</h4>
-                  <p className="text-sm text-gray-600">Schedule your tutoring session through Calendly</p>
+                  <h4 className="font-semibold text-gray-900 mb-3">Book Your Session</h4>
+                  <p className="text-gray-600 text-sm">Schedule through Calendly and receive confirmation</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-green-600 font-bold text-xl">2</span>
+                  <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-2xl">2</span>
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Send Payment</h4>
-                  <p className="text-sm text-gray-600">Pay via Zelle or Venmo before your session</p>
+                  <h4 className="font-semibold text-gray-900 mb-3">Send Payment</h4>
+                  <p className="text-gray-600 text-sm">Pay via Zelle or PayPal within 12 hours</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-purple-600 font-bold text-xl">3</span>
+                  <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-2xl">3</span>
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Start Learning</h4>
-                  <p className="text-sm text-gray-600">Begin your tutoring session with confidence</p>
+                  <h4 className="font-semibold text-gray-900 mb-3">Start Learning</h4>
+                  <p className="text-gray-600 text-sm">Begin your tutoring session with confidence</p>
                 </div>
               </div>
             </div>
