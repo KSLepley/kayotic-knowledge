@@ -402,7 +402,7 @@ export default function Home() {
                   Face-to-face sessions for hands-on learning and immediate feedback.
                 </p>
                 <Button className="w-full bg-purple-600 hover:bg-purple-700" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                  Schedule In-Person
+                  Book Here!
                 </Button>
               </CardContent>
             </Card>
