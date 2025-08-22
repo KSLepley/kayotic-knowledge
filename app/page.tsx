@@ -88,6 +88,17 @@ export default function Home() {
         </div>
       </nav>
 
+      {/* Floating Book Now Button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <Button 
+          size="lg"
+          className="bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-full px-6 py-3 text-lg font-semibold"
+          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          📚 Book Now!
+        </Button>
+      </div>
+
       {/* Hero Section */}
       <section id="home" className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 text-white py-20 lg:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -385,7 +396,7 @@ export default function Home() {
                   Online sessions from anywhere. Interactive whiteboard and screen sharing available.
                 </p>
                 <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                  Book Here!
+                  Book Now!
                 </Button>
               </CardContent>
             </Card>
@@ -402,7 +413,7 @@ export default function Home() {
                   Face-to-face sessions for hands-on learning and immediate feedback.
                 </p>
                 <Button className="w-full bg-purple-600 hover:bg-purple-700" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                  Book Here!
+                  Book Now!
                 </Button>
               </CardContent>
             </Card>
