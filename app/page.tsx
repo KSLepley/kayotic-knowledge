@@ -119,7 +119,7 @@ export default function Home() {
                 <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-lg px-8 py-6" onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}>
                   View Pricing
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-6" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 text-lg px-8 py-6 border-2 border-white" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
                   Our Services
                 </Button>
               </div>
@@ -912,7 +912,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Phone</h4>
-                  <p className="text-gray-600">Will be given once session is booked</p>
+                  <p className="text-gray-600">Provided upon appointment confirmation</p>
                 </div>
               </div>
               
@@ -1080,7 +1080,7 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
               <p className="text-gray-300">Email: kayoticknowledge@gmail.com</p>
-              <p className="text-gray-300">Phone: Will be given once session is booked</p>
+              <p className="text-gray-300">Phone: Provided upon appointment confirmation</p>
             </div>
           </div>
           
