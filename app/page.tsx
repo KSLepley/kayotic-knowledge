@@ -125,8 +125,12 @@ export default function Home() {
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-64 h-64 bg-white/10 rounded-full flex items-center justify-center">
-                  <GraduationCap className="w-32 h-32 text-white/80" />
+                <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
+                  <img 
+                    src="/images/profile-selfie.jpg" 
+                    alt="Kaylie - Your Tutor" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-2xl">A+</span>
@@ -195,29 +199,47 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-8 rounded-2xl text-white text-center">
-                <div className="space-y-4">
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <GraduationCap className="w-10 h-10 text-white" />
+            <div className="space-y-6">
+              {/* Graduation Achievement */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-6 rounded-2xl text-white text-center">
+                  <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 mx-auto mb-4">
+                    <img 
+                      src="/images/graduation-photo.jpg" 
+                      alt="Kaylie's UCSC Graduation" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h4 className="text-xl font-bold">UC Santa Cruz Graduate</h4>
-                  <p className="text-blue-100">Bachelor of Science in Computer Science</p>
-                  <div className="flex justify-center space-x-4 pt-4">
-                    <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                  <h4 className="text-lg font-bold">UC Santa Cruz Graduate</h4>
+                  <p className="text-blue-100 text-sm">Bachelor of Science in Computer Science</p>
+                  <div className="flex justify-center space-x-2 pt-3">
+                    <Badge variant="secondary" className="bg-white/20 text-white border-white/30 text-xs">
                       CS Major
                     </Badge>
-                    <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                    <Badge variant="secondary" className="bg-white/20 text-white border-white/30 text-xs">
                       Basketball
                     </Badge>
-                    <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                    <Badge variant="secondary" className="bg-white/20 text-white border-white/30 text-xs">
                       Tutor
                     </Badge>
-                    </div>
+                  </div>
                 </div>
               </div>
+
+              {/* Personal Connection */}
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center">
+                <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-blue-200 mx-auto mb-4">
+                  <img 
+                    src="/images/profile-selfie.jpg" 
+                    alt="Kaylie - Your Tutor" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900">Ready to Help You Succeed!</h4>
+                <p className="text-gray-600 text-sm">Friendly, approachable, and here to support your academic journey</p>
+              </div>
               
-              <div className="absolute -bottom-4 -right-4 bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+              <div className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg text-center">
                 Available Now!
               </div>
             </div>
