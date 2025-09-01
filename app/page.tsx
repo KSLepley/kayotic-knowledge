@@ -424,9 +424,9 @@ export default function Home() {
                   <p className="text-sm text-gray-600">8th Grade Student</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">
+              <p className="text-gray-700 italic leading-relaxed">
                 "I was totally lost in algebra until Kaylie came along. She explained quadratic equations using 
-                basketball examples - like how the ball's arc follows a parabola. Now I actually get why we need 
+                basketball examples, like how the ball's arc follows a parabola. Now I actually get why we need 
                 to factor polynomials! My grade jumped from a D+ to a B+ and I'm not scared of math anymore."
               </p>
             </Card>
@@ -434,7 +434,7 @@ export default function Home() {
             <Card className="p-6 min-w-[350px] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex-shrink-0">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-purple-600 font-semibold text-lg">M</span>
+                  <span className="text-green-600 font-semibold text-lg">M</span>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Marcus Rodriguez</h4>
@@ -459,7 +459,7 @@ export default function Home() {
                   <p className="text-sm text-gray-600">7th Grade Student</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">
+              <p className="text-gray-700 italic leading-relaxed">
                 "Kaylie helped me with my science fair project on renewable energy. She taught me how to 
                 research properly and organize my data. When my experiment didn't work the first time, 
                 she helped me figure out what went wrong. I ended up winning second place at the district 
@@ -477,7 +477,7 @@ export default function Home() {
                   <p className="text-sm text-gray-600">High School Junior</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">
+              <p className="text-gray-700 italic leading-relaxed">
                 "Kaylie's critical thinking approach to history was game-changing. Instead of just memorizing 
                 dates, she taught me how to analyze sources and think like a historian. My essays improved 
                 dramatically and I actually enjoy studying history now. She's the reason I'm considering 
@@ -495,7 +495,7 @@ export default function Home() {
                   <p className="text-sm text-gray-600">Parent</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">
+              <p className="text-gray-700 italic leading-relaxed">
                 "My daughter was struggling with test anxiety in math. Kaylie not only helped her understand 
                 the concepts but also taught her study techniques and how to stay calm during exams. 
                 Her confidence has soared and she's now helping other kids in her study group. 
