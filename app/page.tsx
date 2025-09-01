@@ -377,7 +377,7 @@ export default function Home() {
                   <Users className="w-40 h-40 text-blue-600" />
                 </div>
                 <div className="absolute -bottom-4 -left-4 bg-orange-500 text-white px-6 py-3 rounded-full">
-                  <span className="font-semibold">500+ Students Helped</span>
+                  <span className="font-semibold">50+ Students Helped</span>
                 </div>
               </div>
             </div>
