@@ -395,54 +395,119 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide">
+            <Card className="p-6 min-w-[350px] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex-shrink-0">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                   <span className="text-blue-600 font-semibold text-lg">A</span>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Aubrey Esqueda</h4>
-                  <p className="text-sm text-gray-600">High School Junior</p>
+                  <p className="text-sm text-gray-600">High School Senior</p>
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "Kaylie helped me finally understand calculus! Her explanations are so clear and she's really patient. 
-                My grade went from a C to an A- in just a few weeks."
+                "Kaylie was a lifesaver during college application season! She helped me craft my personal statement 
+                and brainstorm unique project ideas for my AP Literature class. Her feedback on my writing was 
+                spot-on - she caught things my English teacher missed. Got into my dream school and my lit project 
+                won the school's creative writing award!"
               </p>
             </Card>
 
-            <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <Card className="p-6 min-w-[350px] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex-shrink-0">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
                   <span className="text-green-600 font-semibold text-lg">H</span>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Harold Jayden</h4>
-                  <p className="text-sm text-gray-600">Middle School Student</p>
+                  <p className="text-sm text-gray-600">8th Grade Student</p>
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "I was struggling with science, but Kaylie made it fun and easy to understand. 
-                She uses real examples that actually make sense. Now I love learning!"
+                "I was totally lost in algebra until Kaylie came along. She explained quadratic equations using 
+                basketball examples - like how the ball's arc follows a parabola. Now I actually get why we need 
+                to factor polynomials! My grade jumped from a D+ to a B+ and I'm not scared of math anymore."
               </p>
             </Card>
 
-            <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <Card className="p-6 min-w-[350px] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex-shrink-0">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-purple-600 font-semibold text-lg">S</span>
+                  <span className="text-purple-600 font-semibold text-lg">M</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Sarah Chen</h4>
+                  <h4 className="font-semibold text-gray-900">Marcus Rodriguez</h4>
+                  <p className="text-sm text-gray-600">High School Sophomore</p>
+                </div>
+              </div>
+              <p className="text-gray-700 italic">
+                "Kaylie taught me Python from scratch and helped me build a text-based adventure game for my 
+                computer science class. She didn't just show me code - she explained the logic behind it. 
+                When I got stuck debugging, she walked me through it step by step. My teacher was impressed 
+                and now I'm thinking about majoring in CS!"
+              </p>
+            </Card>
+
+            <Card className="p-6 min-w-[350px] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex-shrink-0">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-orange-600 font-semibold text-lg">E</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Emma Thompson</h4>
+                  <p className="text-sm text-gray-600">7th Grade Student</p>
+                </div>
+              </div>
+              <p className="text-gray-700 italic">
+                "Kaylie helped me with my science fair project on renewable energy. She taught me how to 
+                research properly and organize my data. When my experiment didn't work the first time, 
+                she helped me figure out what went wrong. I ended up winning second place at the district 
+                science fair!"
+              </p>
+            </Card>
+
+            <Card className="p-6 min-w-[350px] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex-shrink-0">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-pink-600 font-semibold text-lg">D</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">David Kim</h4>
+                  <p className="text-sm text-gray-600">High School Junior</p>
+                </div>
+              </div>
+              <p className="text-gray-700 italic">
+                "Kaylie's critical thinking approach to history was game-changing. Instead of just memorizing 
+                dates, she taught me how to analyze sources and think like a historian. My essays improved 
+                dramatically and I actually enjoy studying history now. She's the reason I'm considering 
+                a history minor in college."
+              </p>
+            </Card>
+
+            <Card className="p-6 min-w-[350px] hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex-shrink-0">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-indigo-600 font-semibold text-lg">L</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Lisa Park</h4>
                   <p className="text-sm text-gray-600">Parent</p>
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "Kaylie has been amazing with my daughter's English studies. She's not only improved her grades 
-                but also her confidence. Highly recommend!"
+                "My daughter was struggling with test anxiety in math. Kaylie not only helped her understand 
+                the concepts but also taught her study techniques and how to stay calm during exams. 
+                Her confidence has soared and she's now helping other kids in her study group. 
+                Kaylie's impact goes way beyond just academics."
               </p>
             </Card>
+          </div>
+          
+          <div className="text-center mt-8">
+            <p className="text-gray-600 text-sm">
+              💡 Scroll to see more student success stories
+            </p>
           </div>
         </div>
       </section>
