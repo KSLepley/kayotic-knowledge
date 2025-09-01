@@ -160,7 +160,7 @@ export default function Home() {
                 <p className="text-lg text-gray-700 leading-relaxed">
                   I'm not just another tutor - I'm a <span className="font-semibold text-blue-600">UC Santa Cruz graduate</span> with a 
                   <span className="font-semibold text-purple-600"> Bachelor's in Computer Science</span> and a 
-                  <span className="font-semibold text-green-600">3.7 GPA</span> that proves I know how to balance academics with life!
+                  <span className="font-semibold text-green-600">3.77 GPA in BS Computer Science</span> that proves I know how to balance academics with life!
                 </p>
                 
                 <div className="grid grid-cols-2 gap-4 pt-4">
@@ -1080,7 +1080,7 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
               <p className="text-gray-300">Email: kayoticknowledge@gmail.com</p>
-              <p className="text-gray-300">Phone: (555) 123-4567</p>
+              <p className="text-gray-300">Phone: Will be given once session is booked</p>
             </div>
           </div>
           
