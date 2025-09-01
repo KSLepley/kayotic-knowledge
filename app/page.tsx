@@ -441,9 +441,9 @@ export default function Home() {
                   <p className="text-sm text-gray-600">High School Sophomore</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">
+              <p className="text-gray-700 italic leading-relaxed">
                 "Kaylie taught me Python from scratch and helped me build a text-based adventure game for my 
-                computer science class. She didn't just show me code - she explained the logic behind it. 
+                computer science class. She didn't just show me code, she explained the logic behind it. 
                 When I got stuck debugging, she walked me through it step by step. My teacher was impressed 
                 and now I'm thinking about majoring in CS!"
               </p>
