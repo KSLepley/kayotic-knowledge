@@ -309,11 +309,11 @@ export default function Home() {
                 <div className="mx-auto w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-200 transition-colors">
                   <Globe className="w-8 h-8 text-red-600" />
                 </div>
-                <CardTitle>Social Studies</CardTitle>
+                <CardTitle>Health & Nutrition</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  History, Geography, Government, Economics. Connect past events to present understanding.
+                  Fitness fundamentals, sports performance, proper fueling, macronutrients, micronutrients, and overall wellness.
                 </p>
               </CardContent>
             </Card>
@@ -1011,7 +1011,7 @@ export default function Home() {
                       <SelectItem value="math">Mathematics</SelectItem>
                       <SelectItem value="science">Science</SelectItem>
                       <SelectItem value="english">English & Literature</SelectItem>
-                      <SelectItem value="social-studies">Social Studies</SelectItem>
+                      <SelectItem value="health-nutrition">Health & Nutrition</SelectItem>
                       <SelectItem value="foreign-language">Foreign Language</SelectItem>
                       <SelectItem value="study-skills">Study Skills</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
