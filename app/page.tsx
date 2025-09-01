@@ -792,6 +792,26 @@ export default function Home() {
                   <p>✓ Secure • Instant • Use PayPal app or website</p>
                 </div>
               </div>
+
+              {/* Venmo */}
+              <div className="bg-gradient-to-r from-teal-50 to-teal-100 p-6 rounded-xl border border-teal-200">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold text-xl">V</span>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-teal-900">Venmo</h4>
+                    <p className="text-teal-700 text-sm">Quick & Easy Mobile Payments</p>
+                  </div>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-teal-200">
+                  <p className="text-sm text-gray-600 mb-2">Send payment to:</p>
+                  <p className="font-mono text-lg font-bold text-teal-600">kayoticknowledge@gmail.com</p>
+                </div>
+                <div className="mt-3 text-sm text-teal-700">
+                  <p>✓ No fees • Instant • Use Venmo app</p>
+                </div>
+              </div>
             </div>
 
             {/* Payment Policy */}
@@ -864,7 +884,7 @@ export default function Home() {
                     <span className="text-white font-bold text-2xl">2</span>
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-3">Send Payment</h4>
-                  <p className="text-gray-600 text-sm">Pay via Zelle or PayPal within 12 hours</p>
+                  <p className="text-gray-600 text-sm">Pay via Zelle, PayPal, or Venmo within 12 hours</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -934,7 +954,7 @@ export default function Home() {
                   <li>1. Send us your inquiry below (we'll see your service & package preference)</li>
                   <li>2. We'll reply within 24 hours with available times</li>
                   <li>3. You'll receive a Calendly link to choose your preferred time</li>
-                  <li>4. Complete payment via Zelle or PayPal</li>
+                  <li>4. Complete payment via Zelle, PayPal, or Venmo</li>
                   <li>5. Start your learning journey!</li>
                 </ol>
               </div>
