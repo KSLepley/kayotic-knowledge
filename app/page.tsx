@@ -830,9 +830,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg border border-orange-200">
-                  <p className="text-sm text-gray-600 mb-2">After booking your session:</p>
-                  <p className="font-semibold text-orange-700">You have 12 hours to complete payment</p>
-                  <p className="text-xs text-orange-600 mt-2">Sessions without payment within 12 hours will be automatically cancelled</p>
+                  <p className="text-sm text-gray-600 mb-2">After making an official booking:</p>
+                  <p className="font-semibold text-orange-700">Payment must be sent within 12 hours of booking confirmation</p>
+                  <p className="text-xs text-orange-600 mt-2">Booking will be confirmed through email or text. Sessions without payment within 12 hours of confirmation will be automatically cancelled</p>
                 </div>
               </div>
 
@@ -877,14 +877,14 @@ export default function Home() {
                     <span className="text-white font-bold text-2xl">1</span>
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-3">Book Your Session</h4>
-                  <p className="text-gray-600 text-sm">Schedule through Calendly and receive confirmation</p>
+                  <p className="text-gray-600 text-sm">Send inquiry, receive booking confirmation via email/text</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-2xl">2</span>
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-3">Send Payment</h4>
-                  <p className="text-gray-600 text-sm">Pay via Zelle, PayPal, or Venmo within 12 hours</p>
+                  <p className="text-gray-600 text-sm">Pay via Zelle, PayPal, or Venmo within 12 hours of confirmation</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
