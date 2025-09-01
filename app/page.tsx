@@ -1032,7 +1032,7 @@ export default function Home() {
                       <SelectItem value="science">Science</SelectItem>
                       <SelectItem value="english">English & Literature</SelectItem>
                       <SelectItem value="health-nutrition">Health & Nutrition</SelectItem>
-                      <SelectItem value="foreign-language">Foreign Language</SelectItem>
+                      <SelectItem value="computer-science">Computer Science & Critical Thinking</SelectItem>
                       <SelectItem value="study-skills">Study Skills</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
