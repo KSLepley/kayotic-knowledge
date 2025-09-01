@@ -861,7 +861,17 @@ export default function Home() {
                       <span className="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
                       <span><strong>Less than 24 hours:</strong> 50% refund or reschedule</span>
                     </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                      <span><strong>No-show:</strong> No refund, full session fee applies</span>
+                    </li>
                   </ul>
+                  <div className="mt-3 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                    <p className="text-xs text-yellow-800">
+                      <strong>Note:</strong> Cancellation fees help ensure fair scheduling for all students. 
+                      We understand emergencies happen - please contact us as soon as possible.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -871,26 +881,33 @@ export default function Home() {
           <div className="mt-16">
             <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-2xl border border-purple-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">How It Works</h3>
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-2xl">1</span>
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Book Your Session</h4>
-                  <p className="text-gray-600 text-sm">Send inquiry, receive booking confirmation via email/text</p>
+                  <h4 className="font-semibold text-gray-900 mb-3">Fill Out Form</h4>
+                  <p className="text-gray-600 text-sm">Complete the "Book Your Session" form below</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-2xl">2</span>
                   </div>
+                  <h4 className="font-semibold text-gray-900 mb-3">Get Confirmation</h4>
+                  <p className="text-gray-600 text-sm">Wait for email/text to confirm appointment and time</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-2xl">3</span>
+                  </div>
                   <h4 className="font-semibold text-gray-900 mb-3">Send Payment</h4>
-                  <p className="text-gray-600 text-sm">Pay via Zelle, PayPal, or Venmo within 12 hours of confirmation</p>
+                  <p className="text-gray-600 text-sm">You have 12 hours to pay via Zelle, PayPal, or Venmo</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-2xl">3</span>
+                    <span className="text-white font-bold text-2xl">4</span>
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Start Learning</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">Start Learning!</h4>
                   <p className="text-gray-600 text-sm">Begin your tutoring session with confidence</p>
                 </div>
               </div>
@@ -951,11 +968,11 @@ export default function Home() {
               <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
                 <h4 className="font-semibold text-blue-900 mb-2">How Our Booking Process Works:</h4>
                 <ol className="text-sm text-blue-800 space-y-1">
-                  <li>1. Send us your inquiry below (we'll see your service & package preference)</li>
-                  <li>2. We'll reply within 24 hours with available times</li>
-                  <li>3. You'll receive a Calendly link to choose your preferred time</li>
+                  <li>1. Fill out the "Book Your Session" form below</li>
+                  <li>2. Wait for email or text back to confirm appointment and time</li>
+                  <li>3. Appointment confirmed - you now have 12 hours to send payment</li>
                   <li>4. Complete payment via Zelle, PayPal, or Venmo</li>
-                  <li>5. Start your learning journey!</li>
+                  <li>5. Start learning!</li>
                 </ol>
               </div>
               <form className="space-y-6" onSubmit={handleContactSubmit}>
