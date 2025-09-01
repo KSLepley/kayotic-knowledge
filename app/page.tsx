@@ -131,6 +131,7 @@ export default function Home() {
                     src="/images/profile-selfie.jpg" 
                     alt="Kaylie - Your Tutor" 
                     className="w-full h-full object-cover"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://placehold.co/256x256?text=Photo' }}
                   />
                 </div>
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center">
@@ -209,6 +210,7 @@ export default function Home() {
                       src="/images/graduation-photo.jpg" 
                       alt="Kaylie's UCSC Graduation" 
                       className="w-full h-full object-cover"
+                      onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://placehold.co/96x96?text=Photo' }}
                     />
                   </div>
                   <h4 className="text-lg font-bold">UC Santa Cruz Graduate</h4>
@@ -230,10 +232,11 @@ export default function Home() {
               {/* Personal Connection */}
               <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-blue-200 mx-auto mb-4">
-                  <img 
-                    src="/images/profile-selfie.jpg" 
-                    alt="Kaylie - Your Tutor" 
+                  <img
+                    src="/images/profile-selfie.jpg"
+                    alt="Kaylie - Your Tutor"
                     className="w-full h-full object-cover"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'https://placehold.co/80x80?text=Photo' }}
                   />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900">Ready to Help You Succeed!</h4>
