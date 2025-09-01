@@ -318,13 +318,13 @@ export default function Home() {
             <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <CardHeader className="text-center">
                 <div className="mx-auto w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-yellow-200 transition-colors">
-                  <Languages className="w-8 h-8 text-yellow-600" />
+                  <GraduationCap className="w-8 h-8 text-yellow-600" />
                 </div>
-                <CardTitle>Foreign Languages</CardTitle>
+                <CardTitle>Computer Science & Critical Thinking</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  Spanish, French, German, and more. Build fluency through conversation and cultural immersion.
+                  Programming fundamentals, problem-solving, algorithms, and logical reasoning. Develop computational thinking skills.
                 </p>
               </CardContent>
             </Card>
