@@ -385,6 +385,68 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Reviews Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Students & Parents Say</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Real feedback from families who've experienced the Kayotic Tutoring difference
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-blue-600 font-semibold text-lg">A</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Aubrey Esqueda</h4>
+                  <p className="text-sm text-gray-600">High School Junior</p>
+                </div>
+              </div>
+              <p className="text-gray-700 italic">
+                "Kaylie helped me finally understand calculus! Her explanations are so clear and she's really patient. 
+                My grade went from a C to an A- in just a few weeks."
+              </p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-green-600 font-semibold text-lg">H</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Harold Jayden</h4>
+                  <p className="text-sm text-gray-600">Middle School Student</p>
+                </div>
+              </div>
+              <p className="text-gray-700 italic">
+                "I was struggling with science, but Kaylie made it fun and easy to understand. 
+                She uses real examples that actually make sense. Now I love learning!"
+              </p>
+            </Card>
+
+            <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-purple-600 font-semibold text-lg">S</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Sarah Chen</h4>
+                  <p className="text-sm text-gray-600">Parent</p>
+                </div>
+              </div>
+              <p className="text-gray-700 italic">
+                "Kaylie has been amazing with my daughter's English studies. She's not only improved her grades 
+                but also her confidence. Highly recommend!"
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Schedule Section */}
       <section id="schedule" className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
