@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react"
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -126,10 +127,13 @@ export default function Home() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
-                  <img 
+                  <Image 
                     src="/images/profile-selfie.jpg" 
                     alt="Kaylie - Your Tutor" 
+                    width={256}
+                    height={256}
                     className="w-full h-full object-cover"
+                    priority
                   />
                 </div>
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center">
@@ -204,9 +208,11 @@ export default function Home() {
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-6 rounded-2xl text-white text-center">
                   <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 mx-auto mb-4">
-                    <img 
+                    <Image 
                       src="/images/graduation-photo.jpg" 
                       alt="Kaylie's UCSC Graduation" 
+                      width={96}
+                      height={96}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -229,9 +235,11 @@ export default function Home() {
               {/* Personal Connection */}
               <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-blue-200 mx-auto mb-4">
-                  <img 
+                  <Image 
                     src="/images/profile-selfie.jpg" 
                     alt="Kaylie - Your Tutor" 
+                    width={80}
+                    height={80}
                     className="w-full h-full object-cover"
                   />
                 </div>
